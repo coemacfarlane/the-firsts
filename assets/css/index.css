@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "gotham black";
+  src: url("fonts/GOTHAM-BLACK.TTF") format("opentype");
+}
+
+@font-face {
+  font-family: "gotham black italic";
+  src: url("fonts/GOTHAM-BLACKITALIC.TTF") format("opentype");
+}
+
+@font-face {
+  font-family: "myriad pro";
+  src: url("fonts/MyriadPro-Regular.otf") format("opentype");
+}
