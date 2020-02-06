@@ -1,14 +1,29 @@
 @font-face {
   font-family: "gotham black";
-  src: url("fonts/GOTHAM-BLACK.TTF") format("opentype");
+  src: url("assets/fonts/GOTHAM-BLACK.TTF") format("opentype");
 }
 
 @font-face {
   font-family: "gotham black italic";
-  src: url("fonts/GOTHAM-BLACKITALIC.TTF") format("opentype");
+  src: url("assets/onts/GOTHAM-BLACKITALIC.TTF") format("opentype");
 }
 
 @font-face {
   font-family: "myriad pro";
-  src: url("fonts/MyriadPro-Regular.otf") format("opentype");
+  src: url("assets/fonts/MyriadPro-Regular.otf") format("opentype");
+}
+
+:root {
+  --blue: #003b71;
+  --pink: #e54181;
+}
+
+* {
+  margin: 0;
+}
+
+header {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--blue);
 }
