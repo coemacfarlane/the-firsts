@@ -1,6 +1,9 @@
 @font-face {
-  font-family: "gotham black";
-  src: url("assets/fonts/GOTHAM-BLACK.TTF") format("opentype");
+  font-family: "Gotham Black";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Gotham Blakc") url("assets/fonts/GOTHAM-BLACK.TTF")
+    format("opentype");
 }
 
 @font-face {
@@ -20,10 +23,132 @@
 
 * {
   margin: 0;
+  z-index: 50;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  font-family: "Gotham Black", sans-serif;
+  font-size: 3.6em;
+  color: white;
+  text-align: center;
 }
 
 header {
-  height: 100vh;
   width: 100vw;
   background-color: var(--blue);
+  display: grid;
+  grid-template-rows: 5vh 30vh 25vh 10vh 1fr;
+  grid-template-columns: 5vw 5vw 30vw 10vw 45vw 5vw;
+}
+
+.division_line {
+  display: block;
+  background-color: var(--pink);
+  height: 20px;
+}
+
+#title_div {
+  grid-area: 2 / 2 / span 1 / span 4;
+  z-index: 0;
+}
+
+#title_img {
+  height: 90%;
+  align-self: center;
+  justify-self: flex-start;
+}
+
+#title_img + .division_line {
+  align-self: flex-end;
+  animation: grow_width 1.5s ease-out 0.4s 1 normal forwards;
+}
+
+@keyframes grow_width {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 75%;
+  }
+}
+
+#author {
+  grid-area: 3 / 2 / span 1 / span 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+#hero_img {
+  grid-area: 2 / 4 / span 2 / span 2;
+  z-index: 1;
+}
+
+#hero_img > #hero {
+  width: 110%;
+  height: auto;
+}
+
+#author > h2 {
+  align-self: center;
+}
+
+#hero_cap {
+  grid-area: 4 / 1 / span 2 / span 6;
+  background-color: var(--blue);
+  align-self: flex-start;
+}
+
+#hero_cap > .division_line {
+  width: 90vw;
+  margin: 0 5vw;
+}
+
+#hero_cap > h2 {
+  margin: 0 5vw;
+  margin-top: 15px;
+  font-size: 2.2em;
+}
+
+#shop_links {
+  width: 96vw;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding-bottom: 5vh;
+  margin: 0 2vw;
+}
+
+#shop_links a {
+  width: 150px;
+  height: 60px;
+  margin: 5vh 3vw 2vh 3vw;
+  display: flex;
+  outline: solid;
+  outline-width: 3px;
+  outline-color: white;
+
+  transition-duration: 0.4s;
+}
+
+#shop_links span {
+  width: 100%;
+  align-self: center;
+}
+
+#shop_links h2 {
+  font-size: 1em;
+  justify-self: center;
+  margin: 0 5%;
+}
+
+#shop_links a:hover {
+  background-color: white;
+}
+#shop_links a:hover h2 {
+  color: var(--blue);
 }
