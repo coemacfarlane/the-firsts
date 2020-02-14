@@ -144,32 +144,16 @@ under pink line separating it from hero image and author name */
   -webkit-animation: make_visible 2s ease-in 0.8s 1 normal forwards;
 }
 
-#shop_links a {
-  width: 150px;
-  height: 60px;
-  margin: 5vh 3vw 2vh 3vw;
-  display: flex;
+.shop_btn {
   outline: solid;
   outline-width: 3px;
   outline-color: white;
-
-  transition-duration: 0.4s;
+  margin: 5vh 3vw 2vh 3vw;
 }
 
-#shop_links span {
-  width: 100%;
-  align-self: center;
-}
-
-#shop_links h2 {
-  font-size: 1em;
-  justify-self: center;
-  margin: 0 5%;
-}
-
-#shop_links a:hover {
+.shop_btn:hover {
   background-color: white;
 }
-#shop_links a:hover h2 {
+.shop_btn:hover h2 {
   color: var(--blue);
 }
