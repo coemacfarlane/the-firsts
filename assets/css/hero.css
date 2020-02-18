@@ -7,13 +7,6 @@ header {
   grid-template-columns: 5vw 5vw 30vw 10vw 45vw 5vw;
 }
 
-/* pink lines used to separate information or divs */
-.division_line {
-  display: block;
-  background-color: var(--pink);
-  height: 20px;
-}
-
 #title_div {
   grid-area: 2 / 2 / span 1 / span 4;
   z-index: 0;

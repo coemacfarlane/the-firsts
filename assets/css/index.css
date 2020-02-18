@@ -53,6 +53,13 @@ h4 {
   font-size: 1.8em;
 }
 
+/* pink lines used to separate information or divs */
+.division_line {
+  display: block;
+  background-color: var(--pink);
+  height: 20px;
+}
+
 /* basic square button style, no color */
 .btn_link {
   width: 150px;
@@ -160,7 +167,7 @@ h4 {
   outline: none;
 }
 
-/* Video      Video      Video      Video      Video */
+/* VIDEO      VIDEO      VIDEO      VIDEO      VIDEO */
 #video {
   display: flex;
   flex-flow: row nowrap;
@@ -180,6 +187,7 @@ h4 {
   height: 100%;
 }
 
+/* EXCERPT      EXCERPT      EXCERPT      EXCERPT      EXCERPT */
 /* Short quote from book with a link to a pdf excerpt */
 #excerpt {
   display: flex;
@@ -206,7 +214,9 @@ h4 {
 }
 
 #excerpt_wrap .division_line {
-  width: 35%;
+  /* span height:20px, btn height:60px */
+  margin-top: 20px;
+  width: 37%;
 }
 
 #excerpt_wrap .btn_link {
@@ -214,4 +224,78 @@ h4 {
 }
 #excerpt_wrap .btn_link:hover {
   background-color: var(--pink);
+}
+
+/* LIST OF THE FIRSTS     LIST OF THE FIRSTS     LIST OF THE FIRSTS */
+#list {
+}
+
+.card {
+  min-height: 70vh;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 5vh 0;
+}
+.card:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.frame {
+  width: 30vw;
+  height: 90%;
+  display: grid;
+  grid-template-rows: 5% 90% 5%;
+  grid-template-columns: 10% 80% 10%;
+}
+.frame span {
+  grid-area: 1 / 1 / span 2 / span 2;
+  display: block;
+  background-color: var(--blue);
+}
+
+.frame img {
+  grid-area: 2 / 2 / span 2 / span 2;
+  width: 100%;
+}
+
+.name {
+  width: 60vw;
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.name h2 {
+  color: var(--blue);
+  text-align: left;
+  margin: 0 5vw;
+}
+
+.name .division_line {
+  width: 100%;
+}
+
+.name .btn_link {
+  margin-top: 2em;
+  align-self: center;
+  background-color: var(--blue);
+  width: fit-content;
+}
+
+.name .btn_link h2 {
+  color: white;
+}
+
+/* VOTE     VOTE     VOTE     VOTE     VOTE     VOTE     VOTE */
+#vote {
+}
+
+/* ABOUT AUTHOR     ABOUT AUTHOR      ABOUT AUTHOR      ABOUT AUTHOR */
+#about {
+}
+
+/* FOOTER     FOOTER      FOOTER      FOOTER      FOOTER      FOOTER */
+footer {
+  background-color: var(--blue);
 }
