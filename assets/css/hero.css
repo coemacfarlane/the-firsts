@@ -150,3 +150,59 @@ under pink line separating it from hero image and author name */
 .shop_btn:hover h2 {
   color: var(--blue);
 }
+
+@media screen and (max-width: 900px) {
+  header {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 5vh 5vw;
+    width: 90vw;
+    overflow: hidden;
+  }
+
+  header div {
+    grid-area: none !important;
+  }
+
+  #title_img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  @keyframes grow_width {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  @-webkit-keyframes grow_width {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+
+  #hero_img {
+    display: none;
+  }
+
+  #hero_cap {
+    animation: none;
+  }
+
+  #hero_cap > * {
+    /* margin: 0 !important; */
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 90vw;
+  }
+
+  .shop_btn {
+    width: 120px;
+    margin: 5vh 3vw 2vh 3vw;
+  }
+}
