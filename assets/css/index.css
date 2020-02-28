@@ -182,9 +182,7 @@ h4 {
   margin: 1em;
   font-size: 1.2em;
   color: var(--blue);
-}
-#read_more:focus {
-  outline: none;
+  background-color: transparent;
 }
 
 /* VIDEO      VIDEO      VIDEO      VIDEO      VIDEO */
@@ -196,6 +194,7 @@ h4 {
 
 #vid_frame {
   width: 70vw;
+  max-height: 70vh;
 }
 
 /* #vid_wrap iframe {
