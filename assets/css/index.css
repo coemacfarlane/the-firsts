@@ -2,17 +2,25 @@
 @font-face {
   font-family: "Gotham Black";
   font-style: normal;
-  font-weight: normal;
+  font-weight: bold;
   src: local("Gotham Black") url("assets/fonts/GOTHAM-BLACK.TTF")
-    format("opentype");
+    format("truetype");
 }
 
 @font-face {
   font-family: "Gotham Black Italic";
   font-style: italic;
-  font-weight: normal;
+  font-weight: bold;
   src: local("Gotham Black") url("assets/onts/GOTHAM-BLACKITALIC.TTF")
-    format("opentype");
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Gotham Book";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Gotham Book"),
+    url("assets/fonts/Gotham-Book.ttf") format("truetype");
 }
 
 :root {
@@ -20,6 +28,7 @@
   --dark_blue: #00284d;
   --pink: #e54181;
   --header_font: "Gotham Black", sans-serif;
+  --subheader_font: "Gotham Book", sans-serif;
   --para_font: "myriad-pro", sans-serif;
 }
 
@@ -206,21 +215,33 @@ h4 {
   display: flex;
   flex-flow: row nowrap;
 }
-#exc_head > h3 {
+#exc_head > h1 {
   color: var(--pink);
   padding-right: 20px;
   white-space: nowrap;
-  transform: translateY(-10px);
+  transform: translateY(-0.4em);
 }
 
 #excerpt .division_line {
   width: 100%;
 }
 
-#excerpt > h3 {
+#text {
   width: 90%;
   text-align: center;
   margin: 5vh 5%;
+}
+#text > h2 {
+  font-size: 2.8em;
+}
+#text > h3 {
+  font-size: 2em;
+}
+#text > h3,
+#text > h2 {
+  font-family: var(--subheader_font);
+  color: var(--blue);
+  display: inline;
 }
 
 #excerpt_wrap {
@@ -331,7 +352,7 @@ h4 {
 #vote h2 {
   color: var(--blue);
   padding-right: 1em;
-  font-size: 3em;
+  font-size: 2.7em;
 }
 
 #vote .btn_link {
@@ -343,7 +364,7 @@ h4 {
   transition-duration: 0.6s;
 }
 #vote .btn_link > img {
-  width: 150px;
+  width: 110px;
   margin: 10px;
 }
 
@@ -371,10 +392,13 @@ h4 {
   line-height: 1.8em;
 }
 
-#para h2 {
-  color: var(--blue);
+#para h1,
+h2 {
   text-align: center;
   line-height: 1.2em;
+}
+#para h2 {
+  color: var(--blue);
 }
 #para p {
   padding-top: 2em;
@@ -406,8 +430,12 @@ h4 {
 }
 
 /* TOUR DATES     TOUR DATES     TOUR DATES     TOUR DATES */
+#tour {
+  /* max-width: 80vw; */
+}
+
 #tour_list {
-  width: 100%;
+  width: 90%;
   display: flex;
   flex-flow: row wrap;
 }
@@ -437,9 +465,6 @@ footer {
   width: 90vw;
   background-color: var(--blue);
   padding: 5vh 5vw 0 5vw;
-  /* display: flex;
-  flex-flow: column;
-  align-content: center; */
 }
 
 #footer_content {
@@ -484,11 +509,11 @@ footer > #logo {
 }
 
 /* MOBILE     MOBILE      MOBILE      MOBILE */
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
   h1 {
     font-size: 1.8em;
   }
-}
+} */
 @media screen and (max-width: 900px) {
   /* general */
   body {
@@ -533,6 +558,9 @@ footer > #logo {
   }
 
   /* EXCERPT */
+  #text > h2 {
+    font-size: 2em;
+  }
   #excerpt h3 {
     font-size: 1.5em;
   }
